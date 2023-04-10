@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components {
     .promo-li {
         @apply flex flex-col items-center justify-center px-8 py-4 space-y-2;
@@ -10,4 +11,30 @@
     .new {
         @apply bg-[#ffb900] px-3 py-0.5 font-semibold w-fit;
     }
+}
+
+.navbar a {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
+}
+
+.container-1 a:hover,
+.container-2 a:hover {
+    text-decoration: underline;
+    
+}
+
+.container-1 a img
+{
+    transition: transform 350ms;
+}
+
+.container-1 a:hover img
+{
+    transform:translateX(4px);
 }

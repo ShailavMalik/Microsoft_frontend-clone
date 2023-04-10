@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="box-border">
     <!-- navbar -->
     <div class="navbar flex justify-between items-center pb-1 md:px-[4%]">
         <div class="flex items-center md:hidden">
@@ -45,22 +45,24 @@
 
         </div>
         <div class="md:flex md:order-3 md:items-center md:space-x-5">
-            <div class="opt hidden md:flex md:text-[13px]">All Microsoft
+            <div class="opt hidden md:flex md:text-[13px]">
+                <a href="#"> All Microsoft </a>
                 <img class="h-5 translate-y-0.5" src="Img\8066258.png" alt="">
             </div>
-            <div class="search hidden md:flex md:max-h-min"><span
-                    class="hidden text-[13px] mr-1 2xl:block">Search</span><img class="w-5"
-                    src="Img/search.d9683a5a.png" alt=""></div>
-
+            <a class="box-border" href="#">
+                <div class="search hidden md:flex md:max-h-min">
+                    <span class="hidden text-[13px] mr-1 2xl:block">Search</span>
+                    <img class="w-5" src="Img/search.d9683a5a.png" alt="">
+                </div>
+            </a>
 
 
             <div class="pr-6 flex items-center space-x-5">
-                <button>
-                    <div class="md:flex justify-center items-start">
-                        <span class="hidden text-[13px] mr-2 2xl:block">Cart</span>
-                        <img class="w-4" src="Img/shopping-cart.89c38ab8.png" alt="">
-                    </div>
-                </button>
+
+                <div class="md:flex justify-center items-start">
+                    <a href="#"> <span class="hidden text-[13px] mr-2 2xl:block">Cart</span> </a>
+                    <img class="w-4" src="Img/shopping-cart.89c38ab8.png" alt="">
+                </div>
                 <button>
                     <div class="flex items-center">
                         <span class="hidden text-[13px] mr-3 2xl:block">Sign in</span>
@@ -86,7 +88,8 @@
             <h2 class="text-2xl font-semibold py-2 xl:text-4xl">Surface Pro 9</h2>
             <p class="my-2">Tablet versatility and laptop power - all in one ultra-portable
                 device</p>
-            <div class="bg-[#0067b8] font-medium py-2 px-3 w-fit text-white mt-6"><a href="#">Learn more</a></div>
+            <div class="bg-[#0067b8] font-medium py-2 px-3 w-fit text-white mt-6 hover:bg-[#205e90]"><a href="#">Learn
+                    more</a></div>
 
         </div>
         <hr class="shadow-[0_5px_6px_-6px_inset_#8c8b8b] border-none h-1 md:hidden">
@@ -130,16 +133,19 @@
     </div>
 
     <!-- container1 -->
-    <div class="md:pt-8 lg:flex lg:mx-[3.3%]">
+    <div class="container-1 md:pt-8 lg:flex lg:mx-[3.3%]">
         <div class="sm:flex">
             <div class="px-3 pb-16">
                 <div><img src="Img/Content-Card-Surface-Laptop-5-M1-Platinum-01-1.webp" alt=""></div>
                 <div class="new mt-4">New</div>
                 <div class="text-2xl font-semibold py-2 xl:text-3xl">Surface Laptop 5</div>
                 <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
-                <div class="text-[#0067b8] font-medium mt-6"><a href="#">Learn more
-                        <img class="w-5 inline" src="Img/next.b5903348.png" alt=""></a>
-                </div>
+
+                <a class="text-[#0067b8] block" href="#">
+                    <div class=" font-medium mt-6 inline">Learn more</div>
+                    <img class="w-5 inline" src="Img/next.b5903348.png" alt="">
+                </a>
+
             </div>
 
             <div class="px-3 pb-14">
@@ -191,12 +197,13 @@
             <h2 class="text-2xl font-semibold py-2 xl:text-4xl">Xbox Series X</h2>
             <p class="my-2">The fastest, most powerful Xbox ever
             </p>
-            <div class="bg-[#0067b8] font-medium py-2 px-3 w-fit text-white mt-6"><a href="#">Shop now</a></div>
+            <div class="bg-[#0067b8] hover:hover:bg-[#205e90] font-medium py-2 px-3 w-fit text-white mt-6"><a
+                    href="#">Shop now</a></div>
         </div>
     </div>
 
     <!-- container2 -->
-    <div class="lg:mx-[3.3%]">
+    <div class="container-2 lg:mx-[3.3%]">
         <h1 class="mt-16 text-3xl font-semibold py-5 px-3 xl:text-4xl">For business</h1>
         <div class="lg:flex ">
             <div class="sm:flex">
