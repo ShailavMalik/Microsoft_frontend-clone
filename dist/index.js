@@ -14,5 +14,7 @@ function showAllMicrosoftOpt() {
   allMicrosoftOpt.classList.toggle("md:flex");
   allMicrosoft.classList.toggle("bg-[#f2f2f2]");
   allMicrosoft.classList.toggle("pb-1");
-  allMicrosoft.classList.toggle("py-3.5");
+  allMicrosoft.classList.toggle("py-4");
+  allMicrosoft.classList.toggle("-translate-y-1");
+  allMicrosoft.classList.toggle("border-none");
 }

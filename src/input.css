@@ -18,7 +18,6 @@
 }
 
 /* navbar a have to be separately designed */
-
 .navbar a:hover {
     @apply pb-0.5 border-b-2 border-black;
 }
