@@ -1,9 +1,20 @@
+// naming dom elements
 const hamburger = document.querySelector(".hamburger");
 const sidebar = document.querySelector(".features");
 const hamClicked = document.querySelector(".hamClicked");
 const allMicrosoftOpt = document.querySelector(".allMicrosoftOpt");
 const allMicrosoft = document.querySelector(".allMicrosoft");
+const backToTop_btn = document.querySelector(".backToTop_btn");
+const search_bar = document.querySelector(".search_bar");
+const search_btn = document.querySelector(".search_btn");
+const closeSearch_btn = document.querySelector(".closeSearch_btn");
+const search_bar_D=document.querySelector(".search_bar_D");
+const search_btn_D=document.querySelector(".search_btn_D");
+const closeSearch_btn_D=document.querySelector(".closeSearch_btn_D");
+const backToTop_scrollPx = 400;
 
+
+// js functions
 function showSidebar() {
   hamburger.classList.toggle("hidden");
   hamClicked.classList.toggle("hidden");
@@ -19,4 +30,71 @@ function showAllMicrosoftOpt() {
   allMicrosoft.classList.toggle("border-none");
 }
 
-allMicrosoft.addEventListener("click",showAllMicrosoftOpt);
+const navContent = Array.from(document.getElementsByClassName("nav-content"));
+
+// handling search-bar in mobile
+function searchClicked() {
+  search_bar.classList.remove("hidden");
+  search_bar.focus();
+  navContent.forEach((content) => content.classList.add("hidden"));
+  hamburger.classList.add("hidden");
+  closeSearch_btn.classList.remove("hidden");
+}
+function closeSearch() {
+  search_bar.classList.add("hidden");
+  navContent.forEach((content) => content.classList.remove("hidden"));
+  closeSearch_btn.classList.add("hidden");
+  hamburger.classList.remove("hidden");
+}
+
+// handling search-bar in desktop
+const navContent_Desktop = Array.from(
+  document.querySelectorAll(".navContent_Desktop")
+);
+
+// document.querySelector(".microsoft_logo").style.padding="auto -3px auto -3px";
+
+function searchClicked_D() {
+  navContent_Desktop.forEach((content) => content.classList.add("hidden"));
+  document.querySelector(".navContent-features").classList.add("md:hidden");
+  document.querySelector(".search_btn_D span").classList.remove("2xl:block");
+  
+  search_btn_D.classList.add("-translate-x-7");
+  search_bar_D.classList.remove("hidden");
+  closeSearch_btn_D.classList.remove("hidden");
+  
+}
+function closeSearch_D() {
+  navContent_Desktop.forEach((content) => content.classList.remove("hidden"));
+  document.querySelector(".navContent-features").classList.remove("md:hidden");
+  document.querySelector(".search_btn_D span").classList.add("2xl:block");
+
+  search_btn_D.classList.remove("-translate-x-7");
+  search_bar_D.classList.add("hidden");
+  closeSearch_btn_D.classList.add("hidden");
+}
+
+function handleScroll() {
+  if (document.documentElement.scrollTop > backToTop_scrollPx) {
+    backToTop_btn.classList.remove("sm:hidden");
+    backToTop_btn.classList.add("sm:flex");
+  } else {
+    backToTop_btn.classList.add("sm:hidden");
+    backToTop_btn.classList.remove("sm:flex");
+  }
+}
+
+
+
+// handle search click in mobile
+search_btn.addEventListener("click", searchClicked);
+closeSearch_btn.addEventListener("click", closeSearch);
+
+// handle search click in desktop
+search_btn_D.addEventListener("click", searchClicked_D);
+closeSearch_btn_D.addEventListener("click", closeSearch_D);
+
+allMicrosoft.addEventListener("click", showAllMicrosoftOpt);
+
+// conditionally showing 'back to top' button
+document.addEventListener("scroll", handleScroll);
