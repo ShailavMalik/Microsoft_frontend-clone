@@ -1,3 +1,27 @@
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false
+  // }, 
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
+
 // naming dom elements
 const hamburger = document.querySelector(".hamburger");
 const sidebar = document.querySelector(".features");
@@ -8,10 +32,13 @@ const backToTop_btn = document.querySelector(".backToTop_btn");
 const search_bar = document.querySelector(".search_bar");
 const search_btn = document.querySelector(".search_btn");
 const closeSearch_btn = document.querySelector(".closeSearch_btn");
-const search_bar_D=document.querySelector(".search_bar_D");
-const search_btn_D=document.querySelector(".search_btn_D");
-const closeSearch_btn_D=document.querySelector(".closeSearch_btn_D");
+const search_bar_D = document.querySelector(".search_bar_D");
+const search_btn_D = document.querySelector(".search_btn_D");
+const closeSearch_btn_D = document.querySelector(".closeSearch_btn_D");
 const backToTop_scrollPx = 400;
+
+// swiper-slider initialization
+
 
 
 // js functions
@@ -52,23 +79,23 @@ const navContent_Desktop = Array.from(
   document.querySelectorAll(".navContent_Desktop")
 );
 
-// document.querySelector(".microsoft_logo").style.padding="auto -3px auto -3px";
-
 function searchClicked_D() {
   navContent_Desktop.forEach((content) => content.classList.add("hidden"));
   document.querySelector(".navContent-features").classList.add("md:hidden");
   document.querySelector(".search_btn_D span").classList.remove("2xl:block");
-  
+
+  document.querySelector(".microsoft_logo").classList.add("-mx-3");
   search_btn_D.classList.add("-translate-x-7");
   search_bar_D.classList.remove("hidden");
+  search_bar_D.focus();
   closeSearch_btn_D.classList.remove("hidden");
-  
 }
 function closeSearch_D() {
   navContent_Desktop.forEach((content) => content.classList.remove("hidden"));
   document.querySelector(".navContent-features").classList.remove("md:hidden");
   document.querySelector(".search_btn_D span").classList.add("2xl:block");
 
+  document.querySelector(".microsoft_logo").classList.remove("-mx-3");
   search_btn_D.classList.remove("-translate-x-7");
   search_bar_D.classList.add("hidden");
   closeSearch_btn_D.classList.add("hidden");
@@ -83,8 +110,6 @@ function handleScroll() {
     backToTop_btn.classList.remove("sm:flex");
   }
 }
-
-
 
 // handle search click in mobile
 search_btn.addEventListener("click", searchClicked);

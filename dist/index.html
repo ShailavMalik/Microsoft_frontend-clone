@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Microsoft - Cloud, Computers, Apps & Gaming</title>
     <link rel="icon" href="Img/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -50,8 +51,9 @@
         <div class="md:order-1 md:flex md:items-center">
 
             <!-- microsoft logo -->
-            <div class="microsoft_logo nav-content w-36 h-auto mx-3"><a href="#">
-                    <img class="h-[3.3rem]" src="Img/LogoMicrosoft.c12d1e17.png" alt=""></a></div>
+            <div class="microsoft_logo nav-content mx-3"><a href="#">
+                    <img class="h-[3.3rem] w-[140px] min-w-[140px]" src="Img/LogoMicrosoft.c12d1e17.png" alt=""></a>
+            </div>
 
             <div
                 class="features navContent-features hidden text-[15px] w-full absolute left-0 bg-[#f2f2f2] md:bg-white md:static md:text-[13px] md:translate-y-0 md:pl-0 md:flex md:space-x-3">
@@ -99,7 +101,6 @@
                 </button>
                 <button class="closeSearch_btn_D hidden -ml-4 mr-12 px-4 py-1.5 bg-[#c4c4c4] shadow-2xl"
                     type="button">Cancel</button>
-
             </div>
 
             <div class="nav-content navContent_Desktop pr-6 flex items-center space-x-5 ">
@@ -185,27 +186,65 @@
     </div>
 
     <!-- banner -->
-    <div class="banner lg:flex">
-        <div class="top w-full lg:w-3/5 ">
-            <img class="w-full object-cover object-center max-h-[450px] md:max-h-[410px] "
-                src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-9-M1-Family-02-1:VP1-539x440"
-                alt="">
+    <div class="swiper banner">
+        <div class="swiper-wrapper">
+            <div class="banner1 swiper-slide w-screen lg:flex">
+                <div class="top w-full min-h-max lg:w-3/5 ">
+                    <!-- <img class="md:hidden w-full h-auto object-cover  max-h-[490px] md:max-h-[410px] " src="Img/Highlight-Surface-Pro-9-M1-Family-02-1_VP1-539x440.webp" alt=""> -->
+                    <img class="w-full object-cover  max-h-[490px] md:max-h-[410px] "
+                        src="Img/Highlight-Surface-Pro-9-M1-Family-02-1_VP2-859x540.avif" alt="">
+                </div>
+
+                <div
+                    class="bottom px-6 py-6   bg-white  md:relative md:bottom-8 md:m-auto md:shadow-2xl md:bg-white md:w-[96%] lg:m-0 lg:shadow-none lg:static lg:translate-y-0 lg:w-2/5 lg:flex lg:flex-col lg:justify-center lg:bg-[#f2f2f2] lg:px-8">
+                    <div class="bg-[#ffb900] px-3 py-0.5 font-semibold w-fit">New</div>
+                    <h2 class="text-2xl font-semibold py-2 xl:text-4xl">Surface Pro 9</h2>
+                    <p class="my-2">Tablet versatility and laptop power - all in one ultra-portable
+                        device</p>
+                    <div class="bg-[#0067b8] font-medium py-2 px-3 w-fit text-white mt-6 hover:bg-[#205e90]"><a
+                            href="#">Learn
+                            more</a></div>
+
+                </div>
+            </div>
+
+
+            <div class="banner2 swiper-slide w-screen lg:flex lg:flex-row-reverse ">
+                <div class="top w-full lg:w-3/5 ">
+                    <img class="w-full object-cover object-center max-h-[450px] md:max-h-[410px] "
+                        src="Img/Highlight-M365-Icon-Bounce-Word-Merch_VP2-859x540.avif" alt="">
+                </div>
+
+                <div
+                    class="bottom px-6 py-6 pt-14  bg-white md:relative md:bottom-8 md:m-auto md:shadow-2xl md:bg-white md:w-[96%] lg:m-0 
+                lg:pl-28 lg:bg-[#b4d8fa] lg:shadow-none lg:static lg:translate-y-0 lg:w-2/5 lg:flex lg:flex-col lg:justify-center lg:px-8">
+                    <h2 class="text-2xl font-semibold py-2 xl:text-4xl">Windows 365</h2>
+                    <p class="my-2">Turn your ideas into reality, stay safer online and off, and focus on what matters
+                        most
+                        with Microsoft 365 apps
+                    </p>
+                    <div class="bg-[#0067b8] font-medium py-2 px-3 w-fit text-white mt-6 hover:bg-[#205e90]"><a
+                            href="#">For
+                            one person
+                            more</a></div>
+
+                </div>
+            </div>
         </div>
 
-        <div
-            class="bottom px-6 py-6 md:relative md:bottom-8 md:m-auto md:shadow-2xl md:bg-white md:w-[96%] lg:m-0 lg:shadow-none lg:static lg:translate-y-0 lg:w-2/5 lg:flex lg:flex-col lg:justify-center lg:bg-[#f2f2f2] lg:px-8">
-            <div class="bg-[#ffb900] px-3 py-0.5 font-semibold w-fit">New</div>
-            <h2 class="text-2xl font-semibold py-2 xl:text-4xl">Surface Pro 9</h2>
-            <p class="my-2">Tablet versatility and laptop power - all in one ultra-portable
-                device</p>
-            <div class="bg-[#0067b8] font-medium py-2 px-3 w-fit text-white mt-6 hover:bg-[#205e90]"><a href="#">Learn
-                    more</a></div>
+        <!-- swiper pagination -->
+        <div class="swiper-pagination"></div>
 
-        </div>
-        <hr class="shadow-[0_5px_6px_-6px_inset_#8c8b8b] border-none h-1 md:hidden">
-        <!--  -m-10 to get things right -->
-
+        <!-- swiper navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
+
+
+
+
+    <hr class="shadow-[0_5px_6px_-6px_inset_#8c8b8b] border-none h-1 md:hidden">
+
 
     <!-- promo -->
     <div class="promo">
@@ -384,6 +423,7 @@
             <span class="text-xl font-thin">↑</span> Back to top</a>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 
 </body>
