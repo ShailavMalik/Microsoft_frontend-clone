@@ -10,15 +10,25 @@
     .new {
         @apply bg-[#ffb900] px-3 py-0.5 font-semibold w-fit;
     }
+
+    .fitem_hover {
+        @apply border-b-2 border-transparent hover:border-black;
+    }
 }
 
-.navbar a {
+
+
+/* .navbar a {
     @apply pb-0.5 border-b-2 border-transparent;
-}
+} */
 
 /* navbar a have to be separately designed */
-.navbar a:hover {
+/* .navbar a:hover {
     @apply pb-0.5 border-b-2 border-black;
+} */
+
+.allMicrosoftOpt a:hover {
+    @apply underline;
 }
 
 .container-1 a:hover,
@@ -31,19 +41,18 @@
     @apply transition-transform;
 }
 
-.container-1 a:hover img,
+#125 a:hover img,.container-1 a:hover img,
 .container-2 a:hover img {
     @apply translate-x-1;
 }
 
 
 @media only screen and (max-width:858px) {
-    .fitem a {
+    .fitem > a {
         @apply pl-3 border-b border-[#e7e5e5] block py-4;
     }
 
-    /* This is to reset the changes targeted by .navbar a */
-    .fitem>a:hover {
-        @apply pl-3 block py-4 border-b border-[#e7e5e5];
+    .allMicrosoftOpt{
+        @apply bg-red-500
     }
 }

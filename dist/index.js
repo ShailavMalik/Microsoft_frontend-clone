@@ -1,7 +1,10 @@
+// swiper-slider initialization
+
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
-  loop: true,
+  loop: true, 
+  speed:600,
 
   // If we need pagination
   pagination: {
@@ -9,9 +12,10 @@ const swiper = new Swiper(".swiper", {
   },
 
   autoplay: {
-    delay: 2500,
-    disableOnInteraction: false
-  }, 
+    delay: 4300,
+    disableOnInteraction: true,
+   
+  },
 
   // Navigation arrows
   navigation: {
@@ -20,14 +24,13 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-
-
 // naming dom elements
 const hamburger = document.querySelector(".hamburger");
 const sidebar = document.querySelector(".features");
 const hamClicked = document.querySelector(".hamClicked");
 const allMicrosoftOpt = document.querySelector(".allMicrosoftOpt");
 const allMicrosoft = document.querySelector(".allMicrosoft");
+const allMicrosoft_text = document.querySelector(".allMicrosoft_text");
 const backToTop_btn = document.querySelector(".backToTop_btn");
 const search_bar = document.querySelector(".search_bar");
 const search_btn = document.querySelector(".search_btn");
@@ -36,10 +39,6 @@ const search_bar_D = document.querySelector(".search_bar_D");
 const search_btn_D = document.querySelector(".search_btn_D");
 const closeSearch_btn_D = document.querySelector(".closeSearch_btn_D");
 const backToTop_scrollPx = 400;
-
-// swiper-slider initialization
-
-
 
 // js functions
 function showSidebar() {
@@ -51,10 +50,11 @@ function showSidebar() {
 function showAllMicrosoftOpt() {
   allMicrosoftOpt.classList.toggle("md:flex");
   allMicrosoft.classList.toggle("bg-[#f2f2f2]");
-  allMicrosoft.classList.toggle("pb-0.5");
+  // allMicrosoft_text.classList.toggle("pb-0.5");
   allMicrosoft.classList.toggle("py-[15px]");
-  allMicrosoft.classList.toggle("-translate-y-[2.8px]");
-  allMicrosoft.classList.toggle("border-none");
+  allMicrosoft.classList.toggle("pl-3");
+  // allMicrosoft.classList.toggle("-translate-y-[2.8px]");
+  allMicrosoft_text.classList.toggle("hover:border-black");
 }
 
 const navContent = Array.from(document.getElementsByClassName("nav-content"));

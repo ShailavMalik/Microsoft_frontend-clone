@@ -40,9 +40,9 @@
             <!-- search icon for mobile -->
             <div class="search flex pl-1 items-center">
                 <button class="search_btn z-10 h-full"><img class="w-5 translate-y-0.5" src="Img/search.d9683a5a.png"
-                        alt=""></button>
+                        title="Seach Microsoft.com" alt=""></button>
                 <input
-                    class="search_bar hidden -translate-x-8 w-[86vw] py-1.5 my-2 h-full ml-3 focus:outline-blue-400 placeholder:font-light border border-black border-solid placeholder:text-black px-10"
+                    class="search_bar hidden -translate-x-8 w-[86vw] py-1.5 my-2 h-full ml-3 focus:outline-[#0067b8] placeholder:font-light border border-black border-solid placeholder:text-black px-10"
                     placeholder="Search Microsoft.com">
             </div>
 
@@ -56,16 +56,16 @@
             </div>
 
             <div
-                class="features navContent-features hidden text-[15px] w-full absolute left-0 bg-[#f2f2f2] md:bg-white md:static md:text-[13px] md:translate-y-0 md:pl-0 md:flex md:space-x-3">
-                <div class="fitem navContent_Desktop md:w-max"><a href="#"> Microsoft 365</a></div>
-                <div class="fitem navContent_Desktop"><a href="#">Teams </a></div>
-                <div class="fitem navContent_Desktop"><a href="#">Windows </a></div>
-                <div class="fitem navContent_Desktop"><a href="#">Surface</a></div>
-                <div class="fitem navContent_Desktop"><a href="#">Xbox </a></div>
-                <div class="fitem navContent_Desktop"><a href="#">Support</a></div>
+                class="features z-50 hidden  navContent-features  text-[15px] w-full absolute left-0 bg-[#f2f2f2] md:bg-white md:static md:text-[13px] md:translate-y-0 md:pl-0 md:flex md:space-x-3">
+                <div class="fitem fitem_hover md:w-max"><a href="#"> Microsoft 365</a></div>
+                <div class="fitem fitem_hover"> <a href="#">Teams </a></div>
+                <div class="fitem fitem_hover"><a href="#">Windows </a></div>
+                <div class="fitem fitem_hover"><a href="#">Surface</a></div>
+                <div class="fitem fitem_hover"><a href="#">Xbox </a></div>
+                <div class="fitem fitem_hover"><a href="#">Support</a></div>
 
                 <!-- These are only visible in mobile screen in sidebar-->
-                <div class=" md:hidden">
+                <div class="md:hidden">
                     <div class="fitem"><a href="#">Software</a></div>
                     <div class="fitem"><a href="#"> PC & Devices</a></div>
                     <div class="fitem"><a href="#"> Enterainment</a></div>
@@ -82,31 +82,31 @@
         <div class="md:flex  md:order-3 items-center md:space-x-5">
 
             <!-- navContent_Desktop refers to the elements to be removed in desktop screen when search btn is clicked -->
-            <button
-                class="allMicrosoft hidden md:block border-b-2 pb-0.5 border-transparent hover:border-b-2 hover:border-black">
+            <button class="allMicrosoft hidden md:block">
                 <div class="opt navContent_Desktop flex md:text-[13px]">
-                    <div>All Microsoft</div>
-                    <img class="h-5 translate-y 0.5" src="Img\8066258.png" alt="">
+                    <div class="allMicrosoft_text pb-0.5 border-transparent border-b-[3.1px] hover:border-black">
+                        All Microsoft</div>
+                    <img class="h-5 translate-y-0.5" src="Img\8066258.png" alt="">
                 </div>
             </button>
 
             <!-- search icon for desktop -->
             <div class="hidden search md:flex items-center">
                 <input
-                    class="search_bar_D hidden w-[70vw] py-1.5 my-2 h-full  focus:outline-blue-400 placeholder:font-light placeholder:text-[] border border-black border-solid placeholder:text-black px-3"
+                    class="search_bar_D hidden w-[70vw] py-1.5 my-2 h-full  focus:outline-[#0067b8] placeholder:font-light placeholder:text-[] border border-black border-solid placeholder:text-black px-3"
                     placeholder="Search Microsoft.com">
-                <button class="search_btn_D md:flex md:max-h-min">
-                    <span class="hidden text-[13px] mr-1 2xl:block">Search</span>
+                <button class="search_btn_D md:flex md:max-h-min" title="Seach Microsoft.com">
+                    <span class="hidden text-[13px] mr-1 2xl:block fitem_hover">Search</span>
                     <img class="w-5 -translate-y-0.5" src="Img/search.d9683a5a.png" alt="">
                 </button>
-                <button class="closeSearch_btn_D hidden -ml-4 mr-12 px-4 py-1.5 bg-[#c4c4c4] shadow-2xl"
+                <button class="closeSearch_btn_D hidden -ml-4 mr-12 px-4 py-1 bg-[#c4c4c4] shadow-2xl"
                     type="button">Cancel</button>
             </div>
 
             <div class="nav-content navContent_Desktop pr-6 flex items-center space-x-5 ">
 
-                <div class="shoping_cart md:flex justify-center items-start">
-                    <a href="#"> <span class="hidden text-[13px] mr-2 2xl:block">Cart</span> </a>
+                <div class="shoping_cart md:flex justify-center items-start" title="0 items in the cart">
+                    <a href="#"> <span class="hidden text-[13px] mr-2 2xl:block fitem_hover">Cart</span> </a>
                     <img class="w-4" src="Img/shopping-cart.89c38ab8.png" alt="">
                 </div>
                 <button>
@@ -120,7 +120,7 @@
         </div>
 
         <!-- This is a drop-down menu & will be visible on clicking 'All Microsoft' -->
-        <div class="allMicrosoftOpt hidden absolute pl-6 pr-16 pb-10 bg-[#f2f2f2] shadow-2xl text-[13px] left-0 right-0 w-fit m-auto top-12 z-10
+        <div class="allMicrosoftOpt hidden absolute pt-5 pl-6 pr-16 pb-10 bg-[#f2f2f2] shadow-2xl text-[13px] left-0 right-0 w-fit m-auto top-12 z-10
               md:flex-wrap md:max-w-[93%] md:justify-start">
 
             <div class="space-y-6 pr-24 pb-12">
@@ -223,10 +223,13 @@
                         most
                         with Microsoft 365 apps
                     </p>
-                    <div class="bg-[#0067b8] font-medium py-2 px-3 w-fit text-white mt-6 hover:bg-[#205e90]"><a
-                            href="#">For
-                            one person
-                            more</a></div>
+                    <div class="flex">
+                        <div id="125" class="bg-[#0067b8] font-medium py-2 px-3 mr-4 text-white mt-6 hover:bg-[#205e90]"><a
+                                href="#">For one person</a></div>
+
+                        <div class=" font-medium py-2 px-3 text-black mt-6"><a class="hover:underline" href="#">For up to six
+                                person</a><span class="text-xl hover:translate-x-2"> ></span> </div>
+                    </div>
 
                 </div>
             </div>
@@ -244,7 +247,6 @@
 
 
     <hr class="shadow-[0_5px_6px_-6px_inset_#8c8b8b] border-none h-1 md:hidden">
-
 
     <!-- promo -->
     <div class="promo">
