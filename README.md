@@ -1,8 +1,6 @@
 # Microsoft_frontend-clone
 Fully responsive microsoft Frontend Clone using tailwindcss
 
-It is live at https://microsoft-frontend-clone-shailavmalik.vercel.app/
-
 
 ## Desktop View
 
